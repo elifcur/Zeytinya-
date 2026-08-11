@@ -5,6 +5,13 @@ import { isSupabaseConfigured } from '@/utils/env';
 import { createClient, getCurrentUser } from '@/utils/supabase/server';
 import type { AddressRow } from '@/types/database';
 
+
+
+// TODO: Password tip kontrollerini enum yapısına taşı
+// TODO: bu alanlar özellikle title ve description için i18n ile çevrilebilir. 
+// Ancak, bu alanlar SEO açısından önemli olduğundan, çevirilerdeki farklılıklar 
+// SEO performansını etkileyebilir. Bu nedenle, bu alanları çevirmeden önce S
+// EO etkilerini değerlendirmek önemlidir.
 export const metadata = buildMetadata({
   title: 'Adreslerim',
   description: 'Teslimat adreslerinizi yönetin.',

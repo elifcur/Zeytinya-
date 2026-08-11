@@ -11,6 +11,16 @@ export const metadata = buildMetadata({
   noIndex: true,
 });
 
+// TODO: Örnek passsword tipleri, kullanıcıya şifre oluştururken yardımcı olmak için kullanılabilir.
+
+//export enum PasswordTip {
+//   MIN_LENGTH = 'MIN_LENGTH',
+//   CHARACTER_MIX = 'CHARACTER_MIX',
+//   UNIQUE = 'UNIQUE',
+//   NO_PERSONAL_INFO = 'NO_PERSONAL_INFO',
+// }
+
+// İleride değiştirmek istersen tipleri kolay olur. 
 const tips = [
   'En az 8 karakter kullanın; 12 karakter ve üzeri belirgin şekilde daha güvenlidir.',
   'Büyük/küçük harf, rakam ve sembolü bir arada kullanın.',

@@ -17,6 +17,9 @@ export const metadata = buildMetadata({
   noIndex: true,
 });
 
+
+// TODO: PasswordTips'lerinde neden yapmadın burada var 
+// Güzel yaklaşım.. 
 const statusMeta: Record<OrderStatus, { label: string; tone: 'gold' | 'olive' | 'success' | 'warning' | 'neutral' }> = {
   pending: { label: 'Ödeme Bekliyor', tone: 'warning' },
   paid: { label: 'Ödeme Alındı', tone: 'gold' },
@@ -44,7 +47,7 @@ export default async function OrdersPage() {
       .limit(30);
     orders = (data as OrderWithItems[] | null) ?? [];
   }
-
+// TODO: Hard cord içeriyor 
   return (
     <div className="space-y-6">
       {!isSupabaseConfigured && <SupabaseNotice />}
@@ -55,6 +58,7 @@ export default async function OrdersPage() {
             <Package className="size-8 text-muted-foreground" strokeWidth={1.3} />
           </span>
           <h2 className="mt-6 font-display text-2xl text-foreground">Henüz siparişiniz yok</h2>
+
           <p className="mt-2.5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             İlk siparişinizi verdiğinizde tüm detayları — kargo durumu dâhil — bu sayfadan takip
             edebileceksiniz.

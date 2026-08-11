@@ -9,11 +9,12 @@ export const metadata = buildMetadata({
   path: '/cart',
   noIndex: true,
 });
-
+// TODO : 
 export default function CartPage() {
   return (
     <div className="pt-24 pb-20 sm:pt-28 lg:pt-32">
       <Container>
+        
         <Breadcrumbs
           trail={[
             { name: 'Ana Sayfa', path: '/' },
